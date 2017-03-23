@@ -1,2 +1,3 @@
 name: Yi Meng
 markdown: kramdown
+permalink: /research/:year/:month/:day/:title
