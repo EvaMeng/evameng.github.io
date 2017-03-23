@@ -2,14 +2,11 @@
 layout: default
 title: About Yi Meng (Eva)
 ---
-<head>
-  <!-- About  -->
-  <body>
-  This is the display.
-  {{div|safe}}
-  Growing up in Beijing, I have experienced the changes in the city. From our own history in the Great Wall, the Forbidden City and the Temple of Heaven all the way through modern time’s National Stadium (Bird’s Nest), National Center for Performing Arts and CCTV Tower. Even so, as you walk along the South Luogu Lane, the largest chessboard-type traditional residential area, you will be attracted by the high quality ancient architectures but also be surprised by various stores on both sides such as coffee houses, theme bars and Chinese traditional handicrafts. Most of them feature on the living values of old Beijing, but you are also surrounded by decorative catchphrases or even the latest fashion elements from all around the world. Living in such an inclusive yet multicultural city, I was greatly influenced by my diverse surroundings and opportune learning experiences. Among others, learning English turned out to be a big stepping stone for me. 
-  While continuing to study English at International College Beijing, I enriched myself with a wide knowledge of humanity and behavior science in order to devote myself to the social welfare services. I was actively involved in Beijing International Airport volunteer services. Being able to interact with different people and offer help as a volunteer was a special experience for me. Often, foreign passengers would come to me with a sense of loss and confusion. Not being able to find the appropriate counter to check in while in an unfamiliar surrounding can be especially frustrating. In situations like this, I would first try to ease any tension with a smile and friendly greeting and follow up with detailed guidance according to their flight information. I really enjoyed the experience in serving, especially after seeing smiles on their faces knowing that I have helped. 
-  My academic journey continued at UC Denver has provided me with more opportunities contributing to my personal and intellectual growth. I was selected to be math tutor at Learning Resource Center just after I arrived in the United States. Although it was a turning point in my life to acclimate in a different country, co-workers and staff members helped me feel especially welcome. At the Learning Resource Center we devoted our various strengths in different academic fields to tutor students. As a tutor, I offered my own experience and insight to work with students to solve problems, and I also assessed a student’s understanding with leading questions and adjusted as best fit. It was a great opportunity for me to approach familiar topics in math from a new angle while still getting the experience to interact with the diverse student population at UC Denver.
-  Attending as a graduate student in statistics program at UC Davis, I am more confident about the statistical analysis in R and Python. This program provides me both rigorous theoretical knowledge and practical problems in data analysis. Such as, a brief analysis on determinants of plasma beta-carotene levels, the research on the qualifications for data analyst in California and some projects about time series. Please find more information under Research.
+	<h1>{{ page.title }}</h1>
+	<ul class="posts">
 
-  </body>
+	  {% for post in site.posts %}
+	    <li><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+	  {% endfor %}
+	</ul>
+
